@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:3000/ -->
+<html lang="it"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!-- Errore favicon -->
+        <link rel="shortcut icon" href="http://localhost:3000/#">
+
+        <!-- Required meta tags -->
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="./Podcast_files/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+        <!-- Title -->
+        <title>Podcast</title>
+
+        <!-- Custom CSS -->
+        <link href="./Podcast_files/custom-podcast.css" rel="stylesheet">
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script defer="" src="./Podcast_files/jquery-3.4.1.slim.min.js.download" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script defer="" src="./Podcast_files/popper.min.js.download" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script defer="" src="./Podcast_files/bootstrap.min.js.download" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        
+        <!-- Custom JS -->
+        <!-- Cosi' facendo avremo accesso al DOM delle seguenti pagine -->
+        <script defer="" type="module" src="./Podcast_files/main.js.download"></script>
+    </head>
+
+    <body class="color-background">
+        <!-- Barra di navigazione -->
+        <nav class="navbar navbar-dark color-background-navbar">
+            
+            <!-- Logo e relativo nome -->
+            <a class="navbar-brand font-italic font-weight-bold" href="http://localhost:3000/" title="home">
+                <img src="./Podcast_files/logo.png" id="logo-podcast" class="align-text size-img-navbar" alt="Img logo">
+                &nbsp;&nbsp;Podcast
+            </a>
+            
+            <!-- Inserendo 'active' in dropdown-item si evienzia il bottone -->
+            <!-- Dropdown menù per scelta delle categorie -->
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Categorie
+                </button>
+                <div class="dropdown-menu" id="my-dropdown-category">
+                    <a data-id="All" class="dropdown-item" href="http://localhost:3000/">Tutti</a>
+                    <div class="dropdown-divider"></div> <!-- Linea di divisione tra le categorie -->
+                    <a data-id="Tecnologia" class="dropdown-item" href="http://localhost:3000/">Tecnologia</a>
+                    <a data-id="Storia" class="dropdown-item" href="http://localhost:3000/">Storia</a>
+                    <a data-id="Musica" class="dropdown-item" href="http://localhost:3000/">Musica</a>
+                    <a data-id="Cinema" class="dropdown-item" href="http://localhost:3000/">Cinema</a>
+                    <a data-id="Sport" class="dropdown-item" href="http://localhost:3000/">Sport</a>
+                </div>
+            </div>
+
+            <!-- Navbar centrata -> mx-auto -->
+            <form class="form-inline mx-auto pos-navbar-index"> 
+                <input class="form-control mr-sm-2" id="searchbar" type="search" placeholder="Cerca" aria-label="Cerca">
+            </form>
+
+            <!-- Spostamento a destra: nl-auto -->  
+            <div class="navbar-nav nl-auto list-group-horizontal"> 
+                <a class="nav-item nav-link pos-link logged" data-toggle="modal" data-target="#modalLogin" href="http://localhost:3000/">
+                    Accedi&nbsp;&nbsp;
+                    </a><a class="nav-item nav-link logged" data-toggle="modal" data-target="#modalSignIn" href="http://localhost:3000/">
+                        Iscriviti&nbsp;&nbsp;
+                    </a>
+                
+                
+                <ul class="navbar-nav invisible" id="logout">
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://localhost:3000/">Esci&nbsp;&nbsp;</a>
+                    </li>
+                </ul>
+
+                <a>
+                    <img src="./Podcast_files/user.png" class="align-text size-img-navbar" alt="Profilo">
+                </a>
+            </div>
+        </nav>
+
+        <!-- Lista di podcast --> 
+        <main class="container-fluid below-nav" id="my-podcast"></main>
+        
+        <!-- Pop-up per login -->
+        <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="modalLabelLogin" aria-hidden="true"><div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Inserisci le credenziali</h5>
+                        <!-- Bottone 'X' per chiudere -->
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <!-- Campi da compilare -->
+                        <form method="POST" action="http://localhost:3000/" id="login-form" class="container">
+                            <div class="form-group">
+                                <input type="email" name="email" class="form-control" placeholder="Email" required="">
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="password" name="password" min="6" class="form-control" placeholder="Password" autocomplete="on" required="">
+                            </div>
+                            <button type="submit" class="btn btn-primary button">Entra</button>
+                        </form>
+                    </div>
+                </div>
+            </div></div>
+
+        <!-- Pop-up per SignIn -->
+        <div class="modal fade" id="modalSignIn" tabindex="-1" role="dialog" aria-labelledby="modalLabelSignIn" aria-hidden="true"><div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Inserisci le credenziali</h5>
+                        <!-- Bottone 'X' per chiudere -->
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <!-- Campi da compilare -->
+                        <form method="POST" action="http://localhost:3000/" id="signin-form" class="container">
+                            <div class="form-group">
+                                <input type="text" name="username" class="form-control" placeholder="Username" required="">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" class="form-control" placeholder="Email" required="">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" name="password" class="form-control" placeholder="Password" autocomplete="on" required="">
+                            </div>
+                            <div class="form-group form-check">
+                                <input type="checkbox" name="creator" class="form-check-input" id="check">
+                                <label class="form-check-label" for="check">Creatore</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary button">Iscriviti</button>
+
+                        </form>
+                    </div>
+                </div>
+            </div></div>
+
+        <!-- Pop-up per l'aggiunta dei podcast -->
+        <div class="modal fade" id="modalAddPodcast" tabindex="-1" role="dialog" aria-labelledby="modalLabelAddPodcast" aria-hidden="true"><div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Compila i seguenti campi</h5>
+                        <!-- Bottone 'X' per chiudere -->
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <!-- Campi da compilare -->
+                        <form method="POST" action="http://localhost:3000/" id="addPodcast-form" class="container">
+                            <div class="form-group">
+                            <label for="text" class="col-form-label">Titolo</label>
+                                <input type="text" name="title" class="form-control" required="">
+                            </div>
+
+                            <div class="form-group">
+                            <label for="text" class="col-form-label">Immagine</label>
+                                <input type="text" name="image" placeholder="esempio: foto.jpg" class="form-control" required="">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="textarea" class="col-form-label">Descrizione</label>
+                                <textarea type="text" name="description" class="form-control" autocomplete="on" required=""> </textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <select name="category" class="form-control">
+                                    <option selected="">Categoria</option>
+                                    <option>Tecnologia</option>
+                                    <option>Storia</option>
+                                    <option>Musica</option>
+                                    <option>Cinema</option>
+                                    <option>Sport</option>
+                                </select>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary button">Conferma</button>
+                        </form>
+                    </div>
+                </div>
+            </div></div>
+
+        <!-- La classe 'creator' e' stata asseganata a tutti i pulsanti che svolgono funzioni da creatore -->
+        <img src="./Podcast_files/button-add.png" class="size-button-add pos-button-add invisible creator" title="Aggiungi un podcast!" data-toggle="modal" data-target="#modalAddPodcast" alt="Bottone aggiunta">
+        
+        
+        
+</body></html>

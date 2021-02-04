@@ -1,0 +1,10 @@
+js/app.js -> vedere linea 313
+---------------
+Utenti creatori
+---------------
+vale@vale.it
+psw: valerio
+---------------
+marco@marco.it
+psw: marcomarco
+---------------

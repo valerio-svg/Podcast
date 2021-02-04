@@ -1,0 +1,129 @@
+.container-fluid {
+    font-size: 0px;
+}
+
+/* Color */
+.color-background {
+    background-color: #303088;
+}
+
+.color-background-navbar {
+    background-color: #080853;
+}
+
+.color-description-img {
+    color: white;
+}
+
+.color-label-premium {
+    background-color: yellow;
+    color: black;
+}
+
+/* Size */
+.size-img-navbar {
+    width: 3rem;
+    height: 3rem;
+}
+
+.size-img-index {
+    border: 15px solid #303088;
+    width: 20%;
+    height: 15rem;
+}
+
+.container-fluid {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.size-img-podcast {
+    border: 15px solid #303088;
+    width: 27%;
+    height: 20rem;
+}
+
+.size-text {
+    font-size: 1.6rem;
+    color: white;
+}
+
+.size-text-table {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.size-table {
+    padding: 5rem;
+}
+
+.size-icon-comment {
+    width: 4.2rem;
+    height: 4.2rem;
+}
+
+.size-button-add {
+    width: 4rem;
+    height: 4rem;
+}
+
+/* Position */
+.pos-navbar-index {
+    padding-right: 5rem;
+}
+
+.pos-navbar-iscrizione {
+    padding-right: 5.9rem;
+}
+
+.pos-form-iscrizione {
+    padding-top: 10rem;
+    margin: 20px auto 0 auto;
+    min-height: 120px;
+    overflow: auto;
+    max-width: 500px;
+}
+
+.pos-table-podcast {
+    margin-top: 1rem;
+}
+
+.pos-navbar-podcast {
+    padding-left: 1rem;
+}
+
+.pos-img-podcast {
+    margin-top: 5rem;
+    margin-left: 0.5rem;
+}
+
+.pos-link {
+    margin-left: 4rem;
+}
+
+.pos-button-add {
+    margin-left: 116rem;
+    margin-top: 3rem;
+    transition: background-color .3s;
+}
+
+.pos-button-add:hover {
+    background-color: black;
+}
+
+/* Button modified */
+.button {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+/* Hover img index */
+.effect-img {
+    opacity: 1.0;
+ }
+
+.effect-img:hover { 
+    /* Al passaggio del cursore viene 
+    evidenziata l'immagine */ 
+    opacity: 0.7;
+}

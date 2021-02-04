@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html lang="it">
+
+    <head>
+        <!-- Errore favicon -->
+        <link rel="shortcut icon" href="#">
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+        crossorigin="anonymous">
+
+        <!-- Title -->
+        <title>Podcast</title>
+
+        <!-- Custom CSS -->
+        <link href="/css/custom-podcast.css" rel="stylesheet">
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script defer src="https://code.jquery.com/jquery-3.4.1.slim.min.js" 
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" 
+        crossorigin="anonymous"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" 
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" 
+        crossorigin="anonymous"></script>
+        <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" 
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" 
+        crossorigin="anonymous"></script>
+        <script defer src="./js/moment.min.js"></script>
+
+        <!-- Custom JS -->
+        <!-- Cosi' facendo avremo accesso al DOM delle seguenti pagine -->
+        <script defer type="module" crossorigin="anonymous" src="./js/main.js"></script>
+    </head>
+
+    <body class="color-background">
+        <!-- Barra di navigazione -->
+        <nav class="navbar navbar-dark color-background-navbar fixed-top">
+            
+            <!-- Logo e relativo nome -->
+            <a class="navbar-brand font-italic font-weight-bold" href="/" id="homepage" title="home">
+                <img src="/images/logo.png" id="logo-podcast" class="align-text size-img-navbar" alt="Img logo">
+                &nbsp;&nbsp;Podcast
+            </a>
+            
+            <!-- Inserendo 'active' in dropdown-item si evienzia il bottone -->
+            <!-- Dropdown menù per scelta delle categorie -->
+            <div class="btn-group">
+                <button type="button" class="btn btn-info dropdown-toggle" id="category"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Categorie Podcast
+                </button>
+                <div class="dropdown-menu" id="my-dropdown-category">
+                    <a data-id="All" class="dropdown-item" href="">Tutti</a>
+                    <div class="dropdown-divider"></div> <!-- Linea di divisione tra le categorie -->
+                    <a data-id="Tecnologia" class="dropdown-item" href="">Tecnologia</a>
+                    <a data-id="Storia" class="dropdown-item" href="">Storia</a>
+                    <a data-id="Musica" class="dropdown-item" href="">Musica</a>
+                    <a data-id="Cinema" class="dropdown-item" href="">Cinema</a>
+                    <a data-id="Sport" class="dropdown-item" href="">Sport</a>
+                </div>
+
+                <!-- La classe 'creator' e' stata asseganata a pulsanti che svolgono funzioni da creatore -->
+                <div class="pos-button-add-navbar">
+                    <button type="button" class="btn btn-primary invisible creator" data-toggle="modal" 
+                        data-target="#modalAddPodcast" alt="Bottone aggiunta">
+                        Aggiugi Podcast
+                    </button>
+                    
+                    <button type="button" class="btn btn-primary invisible podcastUser" data-toggle="modal" 
+                        data-target="#modalAddEpisode" alt="Bottone aggiunta">
+                        Aggiugi Episodio
+                    </button>
+                </div>    
+            </div>
+
+            <form class="form-inline mx-auto pos-navbar"> 
+                <input class="form-control mr-sm-2" id="searchbar" type="search" placeholder="Cerca" aria-label="Cerca">
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="check-episode">
+                    <label class="form-check-label color-checkbox" for="check-episode">Episodi</label>
+                </div>
+            </form>
+            
+            <div class="navbar-nav list-group-horizontal"> 
+                <a class="nav-item nav-link logged" data-toggle="modal" data-target="#modalLogin" href="">
+                    Accedi&nbsp;&nbsp;
+                    <a class="nav-item nav-link pos-link-top logged" data-toggle="modal" data-target="#modalSignIn" href="">
+                        Iscriviti&nbsp;&nbsp;
+                    </a>
+                </a>
+                
+                <ul class="navbar-nav invisible pos-link-top" id="logout">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Esci&nbsp;&nbsp;</a>
+                    </li>
+                </ul>
+                
+                <button id="followed" type="button" class="btn btn-primary">
+                    Seguiti
+                </button>
+                &nbsp;
+                <button id="fav" type="button" class="btn btn-primary" id="favorite-button">
+                    Preferiti
+                </button>
+                &nbsp;
+                <button id="data-user" data-toggle="modal" data-target="#modalDataUser" type="button" class="btn btn-primary">
+                    Dati
+                </button>
+            </div>
+        </nav>
+
+        <!-- Lista di podcast --> 
+        <main class="container-fluid below-nav" id="my-podcast">
+            
+        </main>
+
+        <!-- Modale per login -->
+        <div class="modal fade color-text-modal" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="modalLabelLogin" aria-hidden="true">
+            <!-- templates 'createLogin.js' -->
+        </div>
+
+        <!-- Modale per SignIn -->
+        <div class="modal fade color-text-modal" id="modalSignIn" tabindex="-1" role="dialog" aria-labelledby="modalLabelSignIn" aria-hidden="true">
+            <!-- templates 'createSignIn.js' -->
+        </div>
+
+        <!-- Modale per l'aggiunta dei podcast -->
+        <div class="modal fade color-text-modal" id="modalAddPodcast" tabindex="-1" role="dialog" aria-labelledby="modalLabelAddPodcast" aria-hidden="true">
+            <!-- templates 'createAddPodcast.js' -->
+        </div>
+
+        <!-- Modale per l'aggiunta degli episodi -->
+        <div class="modal fade color-text-modal" id="modalAddEpisode" tabindex="-1" role="dialog" aria-labelledby="modalLabelAddEpisode" aria-hidden="true">
+            <!-- templates 'createAddEpisode.js' -->
+        </div>
+        
+        <!-- Modale per dati utente -->
+        <div class="modal fade color-text-modal" id="modalDataUser" tabindex="-1" role="dialog" aria-labelledby="modalLabelDataUser" aria-hidden="true">
+            <!-- templates 'createShowDataUser.js' -->
+        </div>
+        
+    </body>    
+        
+</html>

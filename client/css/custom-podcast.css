@@ -1,0 +1,309 @@
+.container-fluid {
+    font-size: 0px;
+}
+
+.below-nav {
+    margin-top: 4.6rem;
+}
+
+.custom-text {
+    font-style: oblique;
+    color: rgb(202, 202, 228);
+    font-size: 100%;
+}
+
+.custom-text2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(207, 196, 34);
+    font-size: 120%;
+}
+
+/* table podcast */
+.table-podcast {
+    width: 100%;
+    height: auto;
+    table-layout: fixed;
+}
+
+.td-author {
+    width: 5%;
+}
+
+.td-title-pod {
+    width: 10%;
+}
+
+.td-description-pod {
+    width: 22%;
+}
+
+.td-category-pod {
+    width: 5%;
+}
+
+.td-delete-mofidy-podcast {
+    width: 5%;
+}
+
+/* table episode */
+.table-episode {
+    width: 100%;
+    height: auto;
+    table-layout: fixed;
+}
+
+.td-episode-name {
+    width: 10%;
+}
+
+.td-player {
+    width: 5%;
+}
+
+.td-description {
+    width: 20%;
+}
+
+.td-date {
+    width: 10%;
+}
+
+.td-sponsor {
+    width: 5%;
+    text-align: center;
+}
+
+.td-price {
+    width: 5%;
+    text-align: center;
+    table-layout: fixed;
+}
+
+.td-comment {
+    width: 1%;
+}
+
+/* Comment */
+.comment-user {
+    width: 8rem;
+    font-style: oblique;
+    color: blue;
+}
+
+.deleteCommentUser {
+    width: 5rem;
+    font-style: oblique;
+}
+
+.text-comment {
+    text-align: center;
+    font-style: oblique;
+}
+
+.pos-text-comment {
+    margin-top: 1rem;
+}
+
+/* Favorite */
+.color-favorite-add {
+    color: yellow;
+    background-color: black;
+}
+
+.color-favorite-remove {
+    color: red;
+    background-color: black;
+}
+
+.color-checkbox {
+    color: white;
+}
+
+/* Follow */
+.color-follow-add {
+    color: rgb(204, 204, 199);
+    background-color: black;
+}
+
+.color-follow-remove {
+    color: red;
+    background-color: black;
+}
+
+.size-button-follow {
+    width: 25.4%;
+    align-content: center;
+}
+
+/* Color */
+.color-background {
+    background-color: #303088;
+}
+
+.color-background-navbar {
+    background-color: #080853;
+}
+
+.color-description-img {
+    color: white;
+}
+
+.color-text-modal {
+    color: black;
+}
+
+.color-icon-comment {
+    color: darkgoldenrod;
+}
+
+.color-icon-favourite {
+    color: rgb(177, 167, 28);
+}
+
+/* Size */
+.size-img-navbar {
+    width: 3rem;
+    height: 3rem;
+}
+
+.size-img-index {
+    border: 15px solid #303088;
+    width: 20%;
+    height: 15rem;
+}
+
+.container-fluid {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.size-img-podcast {
+    border: 15px solid #303088;
+    width: 27%;
+    height: 20rem;
+}
+
+.size-text {
+    font-size: 1.6rem;
+    color: white;
+}
+
+.size-text-table {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.size-table {
+    padding: 5rem;
+}
+
+.size-button-add {
+    width: 4rem;
+    height: 4rem;
+}
+
+.size-img-profile {
+    width: 8rem;
+    height: 8rem;
+}
+
+.size-table-episode {
+    border-top: 10px solid #303088;
+    border-right: 30px solid #303088;
+    border-left: 30px solid #303088;
+}
+
+/* Position */
+.pos-navbar-iscrizione {
+    padding-right: 5.9rem;
+}
+
+.pos-navbar {
+    padding-right: 9rem;
+}
+
+.pos-table-podcast {
+    margin-top: 1rem;
+}
+
+.pos-navbar-podcast {
+    padding-left: 1rem;
+}
+
+.pos-img-podcast {
+    margin-top: 5rem;
+    margin-left: 0.5rem;
+}
+
+.pos-img-profile {
+    display: block;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.pos-button-add {
+    margin-left: 116rem;
+    margin-top: 3rem;
+    transition: background-color .3s;
+}
+
+.pos-button-add-navbar {
+    margin-left: 0.3rem;
+}
+
+.pos-button-delete-podcast {
+    margin-left: 0.35rem;
+}
+
+.pos-button-episode {
+    margin-top: -3.3rem;
+    margin-left: 25.5rem;
+}
+
+.pos-button-ep {
+    margin-right: 1rem
+}
+
+.pos-div-follow-unfollow {
+    margin-left: 1rem;
+}
+
+.pos-button-pay {
+    margin-top: 1rem;
+}
+
+.pos-button-comment {
+    margin-top: 1rem;
+}
+
+.pos-button-follow {
+    margin-top: 0.3;
+}
+
+/* Button modified */
+.button {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+/* Hover img index */
+.effect-img {
+    opacity: 1.0;
+ }
+
+.effect-img:hover { 
+    /* Al passaggio del cursore viene 
+    evidenziata l'immagine */ 
+    opacity: 0.7;
+}
+
+.data-user {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(0, 0, 0);
+    font-size: 140%;
+}
+
+.data-user-creator {
+    color: rgb(0, 0, 0);
+    font-size: 170%;
+}

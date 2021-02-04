@@ -1,0 +1,8 @@
+"use strict";
+
+import App from './app.js'
+
+const podcastContainer = document.querySelector('#my-podcast');
+const dropdownMenuContainer = document.querySelector('#my-dropdown-category');
+
+const app = new App(podcastContainer, dropdownMenuContainer);
